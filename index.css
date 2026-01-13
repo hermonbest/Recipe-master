@@ -79,17 +79,27 @@ main {
     margin-right: 5px;
 }
 
-ul.ingredients-list {
-    margin-bottom: 48px;
-}
-
 ul.ingredients-list > li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    list-style: disc;
     color: #475467;
     line-height: 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 }
+ul.ingredients-list > li::marker {
+
+    color: #D17557;
+    font-weight: 500;
+    font-size: 1.5em;   
+}
+ul.ingredients-list {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
 
 .remove-btn {
     background: none;
@@ -98,7 +108,9 @@ ul.ingredients-list > li {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0 5px;
-    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .remove-btn:hover {
@@ -157,7 +169,7 @@ ul.ingredients-list > li {
     padding:50px;
 }
 
-.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+.suggested-recipe-container >ul> li, .suggested-recipe-container ol >li {
     margin-bottom: 8px;
 }
 
@@ -254,7 +266,5 @@ ul.ingredients-list > li {
         padding: 20px;
     }
 
-    ul.ingredients-list > li {
-        font-size: 0.9rem;
-    }
+    
 }
